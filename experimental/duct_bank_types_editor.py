@@ -13,49 +13,6 @@ from qgis.PyQt.QtCore import Qt, QRectF, QPointF
 from qgis.PyQt.QtGui import QPen, QBrush, QColor, QFont, QPolygonF, QPainter
 from qgis.utils import iface
 
-# class CollapsibleSection(QWidget):
-#     """Custom widget providing a collapsible section with a toggle button."""
-#     def __init__(self, title, parent=None):
-#         super().__init__(parent)
-#         self.title = title
-#         layout = QVBoxLayout(self)
-#         layout.setContentsMargins(0, 0, 0, 0)
-#         layout.setSpacing(0)
-        
-#         self.btn_toggle = QPushButton(f"▼ {self.title}")
-#         self.btn_toggle.setCheckable(True)
-#         self.btn_toggle.setChecked(True)
-#         self.btn_toggle.setStyleSheet("""
-#             QPushButton {
-#                 text-align: left; 
-#                 font-weight: bold; 
-#                 padding: 6px; 
-#                 border: 1px solid #aaa;
-#                 border-radius: 3px;
-#                 background-color: #e0e0e0;
-#             }
-#             QPushButton:checked {
-#                 background-color: #d0d0d0;
-#             }
-#         """)
-#         self.btn_toggle.clicked.connect(self.toggle_content)
-        
-#         self.content_area = QWidget()
-#         self.content_layout = QVBoxLayout(self.content_area)
-#         self.content_layout.setContentsMargins(8, 8, 8, 8)
-#         self.content_layout.setSpacing(6)
-        
-#         layout.addWidget(self.btn_toggle)
-#         layout.addWidget(self.content_area)
-
-#     def toggle_content(self):
-#         is_expanded = self.btn_toggle.isChecked()
-#         self.content_area.setVisible(is_expanded)
-#         if is_expanded:
-#             self.btn_toggle.setText(f"▼ {self.title}")
-#         else:
-#             self.btn_toggle.setText(f"▶ {self.title}")
-
 class DuctBankView(QGraphicsView):
     def __init__(self):
         super().__init__()
